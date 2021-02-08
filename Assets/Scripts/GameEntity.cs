@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProtoBaba
+public class GameEntity : MonoBehaviour
 {
-    public interface Entity
-    {
-        void TickUpdate();
-    }
+    public TileType tileType;
 }

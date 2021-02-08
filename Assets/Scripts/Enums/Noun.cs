@@ -1,9 +1,5 @@
-﻿namespace ProtoBaba
+﻿public enum Noun
 {
-    public enum Noun
-    {
-        BABA,
-        FLAG
-    }
+    BABA,
+    FLAG
 }
-

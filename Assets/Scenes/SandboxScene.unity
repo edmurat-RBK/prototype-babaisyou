@@ -196,10 +196,11 @@ GameObject:
   m_Component:
   - component: {fileID: 232252757}
   - component: {fileID: 232252759}
+  - component: {fileID: 232252760}
   - component: {fileID: 232252758}
   m_Layer: 0
   m_Name: Word - IS
-  m_TagString: Entity
+  m_TagString: GameEntity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,10 +228,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 232252756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 310efc57a6a028d46babce5d21b59c31, type: 3}
+  m_Script: {fileID: 11500000, guid: 25e3a96acce138d40a8264b10cc704d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordType: 2
+  tileType: 4
 --- !u!212 &232252759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -281,6 +282,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &232252760
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232252756}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &480165957
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,10 +318,11 @@ GameObject:
   m_Component:
   - component: {fileID: 480165958}
   - component: {fileID: 480165959}
+  - component: {fileID: 480165961}
   - component: {fileID: 480165960}
   m_Layer: 0
   m_Name: Word - BABA
-  m_TagString: Entity
+  m_TagString: GameEntity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -372,10 +400,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 480165957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 310efc57a6a028d46babce5d21b59c31, type: 3}
+  m_Script: {fileID: 11500000, guid: 25e3a96acce138d40a8264b10cc704d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordType: 0
+  tileType: 2
+--- !u!61 &480165961
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480165957}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &620070230
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,10 +440,11 @@ GameObject:
   m_Component:
   - component: {fileID: 620070231}
   - component: {fileID: 620070233}
+  - component: {fileID: 620070234}
   - component: {fileID: 620070232}
   m_Layer: 0
   m_Name: Word - YOU
-  m_TagString: Entity
+  m_TagString: GameEntity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,10 +472,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 620070230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 310efc57a6a028d46babce5d21b59c31, type: 3}
+  m_Script: {fileID: 11500000, guid: 25e3a96acce138d40a8264b10cc704d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordType: 4
+  tileType: 6
 --- !u!212 &620070233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -471,6 +526,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &620070234
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620070230}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &881906197
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ddecea7ff78d942b0052ac5483b0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityList: []
 --- !u!1 &1064249291
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543765335}
   - component: {fileID: 1543765336}
+  - component: {fileID: 1543765337}
   m_Layer: 0
   m_Name: Input Manager
   m_TagString: Untagged
@@ -643,7 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 3a96e898bdde40140ac955d821653503,
     type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -656,7 +737,18 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1543765337}
+        m_MethodName: Direction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 892410fd-833b-4926-bca2-e171d39c418c
     m_ActionName: Player/Direction[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
@@ -664,6 +756,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1543765337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543765334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47e1407cbe455546b629b90ca5425e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1549242281
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +781,7 @@ GameObject:
   - component: {fileID: 1549242284}
   m_Layer: 0
   m_Name: Object - BABA
-  m_TagString: Entity
+  m_TagString: GameEntity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,10 +859,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549242281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d486dde0929979141804aa8f35179664, type: 3}
+  m_Script: {fileID: 11500000, guid: 25e3a96acce138d40a8264b10cc704d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 0
+  tileType: 0
 --- !u!1 &1925337372
 GameObject:
   m_ObjectHideFlags: 0
