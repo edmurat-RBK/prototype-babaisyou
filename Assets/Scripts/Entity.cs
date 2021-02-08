@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour
+namespace ProtoBaba
 {
-    void YouBehaviour()
+    public interface Entity
     {
-        Debug.Log("Run YouBehaviour");
-    }
-
-    void WinBehaviour()
-    {
-        Debug.Log("Run WinBehaviour");
+        void TickUpdate();
     }
 }
