@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 4
+  rules: []
 --- !u!212 &232252759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -404,6 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 2
+  rules: []
 --- !u!61 &480165961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -476,6 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 6
+  rules: []
 --- !u!212 &620070233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -724,7 +727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 3a96e898bdde40140ac955d821653503,
     type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -768,6 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47e1407cbe455546b629b90ca5425e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastDirection: 0
 --- !u!1 &1549242281
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 0
+  rules: []
 --- !u!1 &1925337372
 GameObject:
   m_ObjectHideFlags: 0
