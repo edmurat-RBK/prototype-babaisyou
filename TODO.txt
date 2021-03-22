@@ -1,0 +1,9 @@
+Add code to add <Rule> component to correct objects in Is:Step()
+
+Add code to modify objects into another object in Is:Step()
+
+Create RuleComponent class implement in all <RuleComponent> classes (one for each rules) giving only Rule type associed
+	> Important for dictionary of adjectives: System.Type can't be set in Inspector
+	> ? Can't we just use Rule inherited scripts
+
+Create RuleMouvement class inherited from Rule to make all rules that impact mouvement (You, Push...)
