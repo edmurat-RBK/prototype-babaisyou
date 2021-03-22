@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class GameEntity : MonoBehaviour
 {
-    public TileType tileType;
-    public Rule[] rules;
+    public EntityType entityType;
 }

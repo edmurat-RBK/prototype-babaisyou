@@ -4,10 +4,5 @@ using UnityEngine;
 
 public abstract class Rule : MonoBehaviour
 {
-    public void RemoveRule()
-    {
-        Destroy(gameObject);
-    }
-
-    public abstract void PerformStep();
+    public abstract void Step();
 }
