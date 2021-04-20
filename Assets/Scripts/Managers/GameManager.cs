@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
         // Build Adjective dictionary
         foreach (AdjectiveDictionaryEntry entry in adjectiveLibraryEntries)
         {
-            dictAdjectiveWord.Add(entry.word, entry.classType);
+            dictAdjectiveWord.Add(entry.word, entry.ruleComponent.RuleType);
         }
     }
 
@@ -94,5 +94,5 @@ public class NounDictionaryEntry
 public class AdjectiveDictionaryEntry
 {
     public EntityType word;
-    public System.Type classType;
+    public RuleComponent ruleComponent;
 }
