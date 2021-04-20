@@ -9,7 +9,7 @@ public class RuleMovement : Rule
         throw new System.NotImplementedException();
     }
 
-    public bool Move() 
+    public bool Move(Direction direction) 
     { 
         throw new System.NotImplementedException();
     }

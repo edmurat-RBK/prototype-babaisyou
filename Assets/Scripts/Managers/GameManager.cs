@@ -84,6 +84,15 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public void OnStep() {
+        foreach(GameObject go in gameEntityList) {
+            Rule[] rulesOnEntity = go.GetComponents<Rule>();
+            foreach(Rule rule in rulesOnEntity) {
+                rule.Step();
+            }
+        }
+    }
 }
 
 [System.Serializable]
