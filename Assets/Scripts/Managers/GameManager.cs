@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -51,6 +52,8 @@ public class GameManager : MonoBehaviour
     {
         gameEntityList = new List<GameObject>();
         operatorList = new List<GameObject>();
+        dictNounWord = new Dictionary<EntityType, EntityType>();
+        dictAdjectiveWord = new Dictionary<EntityType, System.Type>();
 
         // Build Noun dictionary
         foreach (NounDictionaryEntry entry in nounLibraryEntries)
@@ -61,7 +64,7 @@ public class GameManager : MonoBehaviour
         // Build Adjective dictionary
         foreach (AdjectiveDictionaryEntry entry in adjectiveLibraryEntries)
         {
-            dictAdjectiveWord.Add(entry.word, entry.ruleComponent.RuleType);
+            dictAdjectiveWord.Add(entry.word, Type.GetType(entry.ruleClass));
         }
     }
 
@@ -94,5 +97,5 @@ public class NounDictionaryEntry
 public class AdjectiveDictionaryEntry
 {
     public EntityType word;
-    public RuleComponent ruleComponent;
+    public string ruleClass;
 }
