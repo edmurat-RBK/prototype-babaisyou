@@ -6,4 +6,4 @@ Create RuleComponent class implement in all <RuleComponent> classes (one for eac
 	> Important for dictionary of adjectives: System.Type can't be set in Inspector
 	> ? Can't we just use Rule inherited scripts
 
-Create RuleMouvement class inherited from Rule to make all rules that impact mouvement (You, Push...)
+Create RuleMovement class inherited from Rule to make all rules that impact mouvement (You, Push...)

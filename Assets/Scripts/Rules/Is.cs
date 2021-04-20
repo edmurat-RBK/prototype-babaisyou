@@ -7,7 +7,8 @@ public class Is : Rule
 {
     public override void Step()
     {
-        /* For both direction (up/down and left/right)
+        /* 
+         * For both direction (up/down and left/right)
          * Check if there is two neighbour tiles
          * Then, check if the first one is a noun
          * Then, check if the second one is a noun or an adjective
