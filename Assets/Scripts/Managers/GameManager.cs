@@ -60,12 +60,14 @@ public class GameManager : MonoBehaviour
         dictAdjectiveWord = new Dictionary<EntityType, System.Type>();
 
         // Build Noun dictionary
+        Debug.Log("Build Noun Dictionary");
         foreach (NounDictionaryEntry entry in nounLibraryEntries)
         {
             dictNounWord.Add(entry.word, entry.noun);
         }
 
         // Build Adjective dictionary
+        Debug.Log("Build Adjective Dictionary");
         foreach (AdjectiveDictionaryEntry entry in adjectiveLibraryEntries)
         {
             dictAdjectiveWord.Add(entry.word, Type.GetType(entry.ruleClass));
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // Get all entities and sort them in their respective list
+        Debug.Log("Sort entities");
         GameEntity[] allEntity = FindObjectsOfType<GameEntity>();
         foreach(GameEntity ge in allEntity)
         {
@@ -87,18 +90,33 @@ public class GameManager : MonoBehaviour
                 gameEntityList.Add(ge.gameObject);
             }
         }
+
+        foreach(GameObject go in operatorList) {
+            go.GetComponent<Is>().Step();
+        }
     }
 
-    public void OnStep() 
+    public void PerformStep() 
     {
+        Debug.Log($"Step {stepCount}");
         stepCount++;
-        Debug.Log("Step");
+
+        foreach(GameObject go in gameEntityList) {
+            Rule[] rulesOnEntity = go.GetComponents<Rule>();
+            foreach(Rule rule in rulesOnEntity) {
+                rule.Remove();
+            }
+        }
 
         foreach(GameObject go in gameEntityList) {
             Rule[] rulesOnEntity = go.GetComponents<Rule>();
             foreach(Rule rule in rulesOnEntity) {
                 rule.Step();
             }
+        }
+
+        foreach(GameObject go in operatorList) {
+            go.GetComponent<Is>().Step();
         }
     }
 }

@@ -50,6 +50,8 @@ public class InputManager : MonoBehaviour
 
     public void OnDirection(InputValue value)
     {
+        Debug.Log($"Player press a direction (Received input {value.Get<Vector2>()})");
+
         Vector2 vectDir = value.Get<Vector2>();
         if(vectDir.x < 0)
         {
@@ -70,6 +72,6 @@ public class InputManager : MonoBehaviour
 
         directionStack.Push(lastDirection);
 
-        GameManager.Instance.OnStep();
+        GameManager.Instance.PerformStep();
     }
 }
