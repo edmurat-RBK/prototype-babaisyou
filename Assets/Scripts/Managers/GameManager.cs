@@ -48,6 +48,10 @@ public class GameManager : MonoBehaviour
     public Dictionary<EntityType, EntityType> dictNounWord;
     public Dictionary<EntityType, System.Type> dictAdjectiveWord;
 
+    [Space(10)]
+
+    public int stepCount = 0;
+
     private void Awake()
     {
         gameEntityList = new List<GameObject>();
@@ -85,7 +89,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void OnStep() {
+    public void OnStep() 
+    {
+        stepCount++;
+        Debug.Log("Step");
+
         foreach(GameObject go in gameEntityList) {
             Rule[] rulesOnEntity = go.GetComponents<Rule>();
             foreach(Rule rule in rulesOnEntity) {
