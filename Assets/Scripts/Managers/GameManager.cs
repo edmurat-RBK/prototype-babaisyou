@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
     private static GameManager _instance = null;
     #endregion
 
@@ -104,20 +105,24 @@ public class GameManager : MonoBehaviour
         foreach(GameObject go in gameEntityList) {
             Rule[] rulesOnEntity = go.GetComponents<Rule>();
             foreach(Rule rule in rulesOnEntity) {
-                rule.Remove();
+                rule.Step();
             }
         }
 
         foreach(GameObject go in gameEntityList) {
             Rule[] rulesOnEntity = go.GetComponents<Rule>();
             foreach(Rule rule in rulesOnEntity) {
-                rule.Step();
+                rule.Remove();
             }
         }
 
         foreach(GameObject go in operatorList) {
             go.GetComponent<Is>().Step();
         }
+    }
+
+    public void Win() {
+        Debug.Log("Win !");
     }
 }
 

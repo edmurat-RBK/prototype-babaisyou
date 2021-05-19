@@ -15,7 +15,7 @@ public class Is : Rule
          * Then, check if the second one is a noun or an adjective
          */
 
-        Debug.Log($"{gameObject.name} is performing a step");
+        //Debug.Log($"{gameObject.name} is performing a step");
 
         Vector2[] directionList = new Vector2[] { Vector2.up, Vector2.left };
         foreach(Vector2 direction in directionList)
@@ -26,7 +26,7 @@ public class Is : Rule
             RaycastHit2D[] secondNeighbourEntity = new RaycastHit2D[10];
             int secondNeighbourCount = gameObject.GetComponent<Collider2D>().Cast(-direction, secondNeighbourEntity, 1f);
 
-            Debug.Log($"#first hits ({firstNeighbourCount}) and #second hits ({secondNeighbourCount})");
+            //Debug.Log($"#first hits ({firstNeighbourCount}) and #second hits ({secondNeighbourCount})");
 
             if (firstNeighbourCount > 0 && secondNeighbourCount > 0)
             {
@@ -34,21 +34,21 @@ public class Is : Rule
                 {
                     if(frch.collider != null) 
                     {
-                        Debug.Log($"Hit #1 : {frch.collider.gameObject.name}");
+                        //Debug.Log($"Hit #1 : {frch.collider.gameObject.name}");
                         if(GameManager.Instance.dictNounWord.Keys.Contains(frch.collider.gameObject.GetComponent<GameEntity>().entityType))
                         {
                             foreach(RaycastHit2D srch in secondNeighbourEntity)
                             {
                                 if(srch.collider != null) 
                                 {
-                                    Debug.Log($"Hit #2 : {srch.collider.gameObject.name}");
+                                    //Debug.Log($"Hit #2 : {srch.collider.gameObject.name}");
                                     if(GameManager.Instance.dictAdjectiveWord.Keys.Contains(srch.collider.gameObject.GetComponent<GameEntity>().entityType))
                                     {
                                         // NOUN is ADJECTIVE
                                         // Add Rule componement linked to adjective in objects linked to noun
                                         EntityType entityType = GameManager.Instance.dictNounWord[frch.collider.gameObject.GetComponent<GameEntity>().entityType];
                                         Type ruleType = GameManager.Instance.dictAdjectiveWord[srch.collider.gameObject.GetComponent<GameEntity>().entityType];
-                                        Debug.Log($"Add Component {ruleType} to {entityType} ({entityType} is {ruleType})");
+                                        //Debug.Log($"Add Component {ruleType} to {entityType} ({entityType} is {ruleType})");
                                         foreach(GameObject go in GameManager.Instance.gameEntityList) 
                                         {
                                             if(go.GetComponent<GameEntity>().entityType == entityType) 
@@ -56,11 +56,6 @@ public class Is : Rule
                                                 go.AddComponent(ruleType);
                                             }
                                         }
-                                    }
-                                    else if (GameManager.Instance.dictNounWord.Keys.Contains(srch.collider.gameObject.GetComponent<GameEntity>().entityType))
-                                    {
-                                        // NOUN is NOUN
-                                        // TODO: Change object linked to first noun into object linked to second noun 
                                     }
                                 }
                             }

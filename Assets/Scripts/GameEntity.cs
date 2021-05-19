@@ -16,7 +16,7 @@ public class GameEntity : MonoBehaviour
     {
         Rule[] rules = GetComponents<Rule>();
         foreach(Rule rule in rules) {
-            if(typeof(Rule) == ruleType) 
+            if(rule.GetType() == ruleType) 
             {
                 return true;
             }

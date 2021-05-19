@@ -9,7 +9,7 @@ public class RuleMovement : Rule
 
     public override void Step()
     {
-        throw new System.NotImplementedException();
+        // Do nothing
     }
 
     /*
@@ -27,18 +27,21 @@ public class RuleMovement : Rule
 
             RaycastHit2D[] rcHit = new RaycastHit2D[10];
             Collider2D collider = gameObject.GetComponent<Collider2D>();
-            if(collider.Cast(ConvertDirection(direction), rcHit, 1) > 0)
+            int hitCount = collider.Cast(ConvertDirection(direction), rcHit, 1);
+            if(hitCount > 0)
             {
                 foreach(RaycastHit2D hit in rcHit) {
-                    GameEntity ge = hit.collider.gameObject.GetComponent<GameEntity>();
-                    if(ge.HasRule(typeof(Stop))) 
-                    {
-                        movable = false;
-                    }
-                    else if(ge.HasRule(typeof(Push)))
-                    {
-                        Push pushRule = ge.GetComponent<Push>();
-                        movable = pushRule.PushAction(direction);
+                    if(hit.collider != null) {
+                        GameEntity ge = hit.collider.gameObject.GetComponent<GameEntity>();
+                        if(ge.HasRule(typeof(Stop))) 
+                        {
+                            movable = false;
+                        }
+                        else if(ge.HasRule(typeof(Push)))
+                        {
+                            Push pushRule = ge.GetComponent<Push>();
+                            movable = pushRule.PushAction(direction);
+                        }
                     }
                 }
             }
@@ -49,7 +52,7 @@ public class RuleMovement : Rule
             transform.position += ConvertDirection(direction);
         }
 
-        return false;
+        return movable;
     }
 
     private Vector3 ConvertDirection(Direction direction) 
