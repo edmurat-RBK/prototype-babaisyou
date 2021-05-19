@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Push : Rule
+public class Push : RuleMovement
 {
     public override void Step()
     {
-        throw new System.NotImplementedException();
+        // Nothing happens at each step
     }
 
     public bool PushAction(Direction direction) 
     { 
-        throw new System.NotImplementedException();
+        return Move(direction);
     }
 }
