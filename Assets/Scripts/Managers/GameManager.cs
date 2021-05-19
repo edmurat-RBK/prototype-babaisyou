@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -118,6 +119,12 @@ public class GameManager : MonoBehaviour
 
         foreach(GameObject go in operatorList) {
             go.GetComponent<Is>().Step();
+        }
+
+        foreach(GameObject go in gameEntityList) {
+            if(dictNounWord.Keys.Contains(go.GetComponent<GameEntity>().entityType) || dictAdjectiveWord.Keys.Contains(go.GetComponent<GameEntity>().entityType)) {
+                go.AddComponent<Push>();
+            }
         }
     }
 
