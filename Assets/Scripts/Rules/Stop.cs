@@ -6,6 +6,6 @@ public class Stop : Rule
 {
     public override void Step()
     {
-        throw new System.NotImplementedException();
+        // Do nothing
     }
 }

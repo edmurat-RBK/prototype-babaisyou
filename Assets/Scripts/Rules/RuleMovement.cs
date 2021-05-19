@@ -37,7 +37,8 @@ public class RuleMovement : Rule
                     }
                     else if(ge.HasRule(typeof(Push)))
                     {
-                        // TODO : Check if push direction is free
+                        Push pushRule = ge.GetComponent<Push>();
+                        movable = pushRule.PushAction(direction);
                     }
                 }
             }
